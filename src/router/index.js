@@ -65,6 +65,12 @@ export default new Router({
       path: '/write',
       component: resolve => require(['../components/page/Write.vue'], resolve),
       meta: {title: '写文章'}
+    },
+    {
+      // 登录
+      path: '/sign-in',
+      component: resolve => require(['../components/page/Login.vue'], resolve),
+      meta: {title: '登录'}
     }
   ]
 })

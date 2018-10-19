@@ -392,7 +392,8 @@
 
     <p><i class="icon-camera-retro icon-large"></i> icon-camera-retro</p>
 
-    <!--<font-awesome-icon icon-->
+
+
   </div>
 
 </template>

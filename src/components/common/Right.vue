@@ -209,6 +209,8 @@
 }
 .avatar {
   float: left;
+  width: 48px;
+  height: 48px;
   margin-right: 10px;
 }
 .list {

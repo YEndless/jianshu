@@ -62,6 +62,8 @@
     </div>
     <div class="menu ">收到的评论</div>
     <p class="center">这里还木有内容哦~</p>
+    <font-awesome-icon icon="fa-mars-stroke " />
+    <font-awesome-icon icon="coffee" />
   </div>
 </template>
 
