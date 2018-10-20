@@ -5,7 +5,7 @@
         <div>
           <button class="bac">
              <a href="/notifications/#/comments">
-              <b-img src="../../static/img/pinglun.png"/>
+              <b-img src="../../static/img/comment.png"/>
                <span>评论</span> <!---->
             </a>
           </button>

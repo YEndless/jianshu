@@ -77,7 +77,7 @@
     data() {
       return {
         name: 'yeiweiyang',
-        token: null
+        token: 1
       }
     },
     computed: {
