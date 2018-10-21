@@ -40,7 +40,7 @@
               "id":1,
               "title":"测试文章",
               "summary":"测试文章测试文章测试文章测试文章测试文章...",
-              "thumbnail":"1.png",
+              "thumbnail":"qq.png",
               "authorId":2,
               "nickname":"作者",
               "comments":1234,
@@ -50,7 +50,7 @@
           "fansList":[
             {
               "authorId":3,
-              "avatar":"11.png"
+              "avatar":"qq.png"
             }
           ]
         };
