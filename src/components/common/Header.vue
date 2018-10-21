@@ -57,8 +57,16 @@
           <template slot="button-content">
             <b-img rounded="circle" width="35" height="35" src="../../static/img/four.png"/>
           </template>
-          <b-dropdown-item href="#">设置</b-dropdown-item>
-          <b-dropdown-item href="#">退出</b-dropdown-item>
+          <b-dropdown-item href="">
+            <router-link to="/setting">
+              设置
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item href="#">
+            <router-link to="#">
+              退出
+            </router-link>
+          </b-dropdown-item>
         </b-nav-item-dropdown>
         <a class="btn write-btn" href="/write">
           写文章

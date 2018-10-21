@@ -236,7 +236,8 @@ i {
   margin-right: 60px;
   font-size: 14px;
   display: block;
-}.guanzhu{
+}
+.guanzhu{
    width: 13px;
    height: 14px;
  }

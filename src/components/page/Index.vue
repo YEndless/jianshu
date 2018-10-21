@@ -2,11 +2,6 @@
   <b-row>
     <b-col cols="8">
       <v-carousel></v-carousel>
-      <!--<div class="recommend-collection">-->
-        <!--&lt;!&ndash;<div class="btn-group" role="group" aria-label="...">&ndash;&gt;-->
-        <!--<button type="button" class="btn btn-default" >Left</button>-->
-        <!--</div>-->
-      <!--</div>-->
       <v-topics></v-topics>
       <v-article></v-article>
     </b-col>
