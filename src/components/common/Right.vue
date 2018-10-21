@@ -129,12 +129,11 @@
           </p>
         </li>
       </ul>
-
-        <a href="/recommendations" target="_blank" class="find-more">
+      <!--recommendations-->
+        <a href="/users" target="_blank" class="find-more">
         查看全部<b-img class = "img-small1"src="../../static/img/left.png"/>
         </a>
     </div>
-
   </div>
 
 </template>

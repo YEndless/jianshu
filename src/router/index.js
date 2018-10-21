@@ -53,9 +53,14 @@ export default new Router({
           meta: {title: '个人中心'}
         },
         {
+          path:"/u/:id",
+          component:resolve => require(['../components/page/User.vue'],resolve),
+          meta:{title:'他人的个人中心'}
+        },
+        {
           path:'/c/:id',
           component:resolve => require(['../components/page/Collection.vue'],resolve),
-          meta1:{title:'单个专题'}
+          meta:{title:'单个专题'}
         }
       ]
     },

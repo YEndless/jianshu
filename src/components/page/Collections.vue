@@ -188,16 +188,16 @@
     font-size: 13px;
     line-height: 25px;
   }
-  .bb {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -2px;
-    width: 100%;
-    opacity: 0;
-    border-bottom: 2px solid #646464;
-    -webkit-transform: translate(-50%) scaleX(0);
-    transform: translate(-50%) scaleX(0);
-    transition: .2s ease-in-out;
-  }
+  /*.bb {*/
+    /*content: "";*/
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*bottom: -2px;*/
+    /*width: 100%;*/
+    /*opacity: 0;*/
+    /*border-bottom: 2px solid #646464;*/
+    /*-webkit-transform: translate(-50%) scaleX(0);*/
+    /*transform: translate(-50%) scaleX(0);*/
+    /*transition: .2s ease-in-out;*/
+  /*}*/
 </style>

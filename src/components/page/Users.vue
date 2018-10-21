@@ -8,21 +8,24 @@
       </a>
     </div>
     <b-row>
-      <b-col cols="4" v-for="topic in topicList" :key="topic.id">
+      <b-col cols="4" v-for="user in userList" :key="user.id">
         <b-card>
           <div class="collection-wrap avater-weizhi">
-            <router-link :to="'/c/'+topic.id">
-              <img :src="topic.topicUrl" class="avatar-collection">
-              <h4 class="name">{{topic.topicName}}</h4>
+            <router-link :to="'/u/'+user.id">
+              <b-img :src="user.UserUrl" class="avatar-collection" rounded="circle"/>
+              <h4 class="name">{{user.userName}}</h4>
             </router-link>
-            <span class="collection-description">{{topic.summary}}</span>
+            <span class="collection-description">{{user.summary}}</span>
             <p>
               <b-button variant="success">关注</b-button>
             </p>
-            <p>
-              <span>{{topic.articleCount}}篇文章</span>
-              <span>{{topic.fans}}个关注</span>
-            </p>
+
+            <div>
+              <div class="meta">最近更新</div>
+              <p>{{user["new-article1"]}}</p>
+              <p>{{user["new-article2"]}}</p>
+              <p>{{user["new-article3"]}}</p>
+            </div>
           </div>
         </b-card>
       </b-col>
@@ -32,46 +35,69 @@
 
 <script>
   export default {
-    name: "Collerctions"
+    name: "Users"
     ,
     data(){
       return{
         id: this.$route.params.id,
-        topicList:[
+        userList:[
           {
             "id":1,
-            "topicName":"读书",
-            "topicUrl":"//upload.jianshu.io/collections/images/4/sy_20091020135145113016.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
-            "summary":"欢迎关注公众号简宝玉( 公众号ID : jianshu4321 )后台...",
-            "articleCount":45135,
-            "fans":160
+            "UserName":"遛遛心情的溜妈",
+            "UserUrl":"//upload.jianshu.io/users/upload_avatars/5205317/1179d71b-e7c6-4023-89e8-bba25f88272b.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+            "summary":"溜爸，简书签约作者，舞枪弄棒、舞文弄墨的计算机工程师，梦想老婆孩子热炕头上写故事。",
+            "attention ": 880,//关注
+            "articleCount":197,//文章数
+            "fans":28734,//粉丝
+            "words":494781,//字数
+            "get-likes":2015,//收获喜欢
+            "new-article1":"［奇幻］唐朝那些猫事儿（91）",//最新文章
+            "new-article2":"［奇幻］唐朝那些猫事儿（90）",
+            "new-article3":"［奇幻］唐朝那些猫事儿（89）",
           },
           {
             "id":2,
-            "topicName":"读书",
-            "topicUrl":"//upload.jianshu.io/collections/images/4/sy_20091020135145113016.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
-            "summary":"欢迎关注公众号简宝玉( 公众号ID : jianshu4321 )后台...",
-            "articleCount":45135,
-            "fans":160
-          }
-          ,
+            "UserName":"遛遛心情的溜妈",
+            "UserUrl":"//upload.jianshu.io/users/upload_avatars/5205317/1179d71b-e7c6-4023-89e8-bba25f88272b.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+            "summary":"溜爸，简书签约作者，舞枪弄棒、舞文弄墨的计算机工程师，梦想老婆孩子热炕头上写故事。",
+            "attention ": 880,//关注
+            "articleCount":197,//文章数
+            "fans":28734,//粉丝
+            "words":494781,//字数
+            "get-likes":2015,//收获喜欢
+            "new-article1":"［奇幻］唐朝那些猫事儿（91）",//最新文章
+            "new-article2":"［奇幻］唐朝那些猫事儿（90）",
+            "new-article3":"［奇幻］唐朝那些猫事儿（89）",
+          },
           {
             "id":3,
-            "topicName":"读书",
-            "topicUrl":"//upload.jianshu.io/collections/images/4/sy_20091020135145113016.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
-            "summary":"欢迎关注公众号简宝玉( 公众号ID : jianshu4321 )后台...",
-            "articleCount":45135,
-            "fans":160
-          }
-          ,
+            "UserName":"遛遛心情的溜妈",
+            "UserUrl":"//upload.jianshu.io/users/upload_avatars/5205317/1179d71b-e7c6-4023-89e8-bba25f88272b.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+            "summary":"溜爸，简书签约作者，舞枪弄棒、舞文弄墨的计算机工程师，梦想老婆孩子热炕头上写故事。",
+            "attention ": 880,//关注
+            "articleCount":197,//文章数
+            "fans":28734,//粉丝
+            "words":494781,//字数
+            "get-likes":2015,//收获喜欢
+            "new-article1":"［奇幻］唐朝那些猫事儿（91）",//最新文章
+            "new-article2":"［奇幻］唐朝那些猫事儿（90）",
+            "new-article3":"［奇幻］唐朝那些猫事儿（89）",
+          },
           {
             "id":4,
-            "topicName":"读书",
-            "topicUrl":"//upload.jianshu.io/collections/images/4/sy_20091020135145113016.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
-            "summary":"欢迎关注公众号简宝玉( 公众号ID : jianshu4321 )后台...",
-            "articleCount":45135,
-            "fans":160
+            "UserName":"遛遛心情的溜妈",
+            "UserUrl":"//upload.jianshu.io/users/upload_avatars/5205317/1179d71b-e7c6-4023-89e8-bba25f88272b.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+            "summary":"溜爸，简书签约作者，舞枪弄棒、舞文弄墨的计算机工程师，梦想老婆孩子热炕头上写故事。",
+            "attention ": 880,//关注
+            "articleCount":197,//文章数
+            "fans":28734,//粉丝
+            "words":494781,//字数
+            "get-likes":2015,//收获喜欢
+            "new-article1":"［奇幻］唐朝那些猫事儿（91）",//最新文章
+            "new-article2":"［奇幻］唐朝那些猫事儿（90）",
+            "new-article3":"［奇幻］唐朝那些猫事儿（89）",
           }
+
         ]
       }
     }
@@ -141,16 +167,12 @@
     font-size: 13px;
     line-height: 25px;
   }
-  .bb {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -2px;
-    width: 100%;
-    opacity: 0;
-    border-bottom: 2px solid #646464;
-    -webkit-transform: translate(-50%) scaleX(0);
-    transform: translate(-50%) scaleX(0);
-    transition: .2s ease-in-out;
+  .meta {
+    float: left;
+    margin-top: -29px;
+    padding-right: 10px;
+    font-size: 12px;
+    color: #969696;
+    background-color: #f8f8f8;
   }
 </style>
