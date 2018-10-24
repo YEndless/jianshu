@@ -89,10 +89,15 @@ export default new Router({
           meta: {title: '单个专题'}
         },
         {
-          path: '/d/:id',
-          component: resolve => require(['../components/page/Content.vue'], resolve),
+          path: '/u/:id',
+          component: resolve => require(['../components/page/ArticleDetail.vue'], resolve),
           meta: {title: '文章详情页'}
         },
+        // {
+        //   path: '/u/:id',
+        //   component: resolve => require(['../components/page/Content.vue'], resolve),
+        //   meta: {title: '文章详情页'}
+        // },
         {
           path: '/setting',
           component: resolve => require(['../components/page/Setting.vue'], resolve),

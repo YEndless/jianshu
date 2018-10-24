@@ -1,252 +1,73 @@
 <template>
-  <!--<b-img clss="img" src="../../static/img/four.png"/>-->
   <div>
-    <b-card title=""
-            img-alt="Img"
-            img-top>
-      <div class="clearfix">
+    <div class="article-content" v-for="(article,index) in articles" :key="article.id">
+      <router-link :to="'/u/'+article.id">
         <b-row>
-          <b-col cols="8">
-            <a class="title" target="_blank" href="/h">海底捞董事长：我做了那么多亲情化举动，却“败给”一个吧台小姑娘</a>
-            <p class="card-text article">
-              01 刚当程序员时，我是属于那种勤勤恳恳类型的员工，工作态度用认真来形容不为过，
-              每天我几乎是团队里最早到公司，又最晚下班的一个。而组员张工一般情...
-            </p>
-            <div class="meta">
-              <a class="card-text" target="_blank" style="color: gray ;font-size: 16px">暮时说势</a>
-              <a target="_blank">
-                <i class="card-text">
-                  <b-img clss="img"
-                         style="opacity:0.5;
-                         filter:alpha(opacity=50);"
-                         src="../../static/img/remake.png"/>
-                  6</i>
-              </a> <span style="padding-left: 8px"><i class="card-text">
-              <b-img class="img" src="../../static/img/like.png"/>9</i> </span>
+          <b-col cols="9">
+            <div class="title">
+              <span>{{article.title}}</span>
             </div>
-            <!--<div slot="footer">-->
-              <!--<small class="text-muted">Last updated 3 mins ago</small>-->
-            <!--</div>-->
+            <div class="abstract">
+              <span>{{article.synopsis}}</span>
+            </div>
+            <div class="abstract">
+              <span>6546546&nbsp;&nbsp;</span>
+              <span><a class="iconfont">&#xe684;</a>&nbsp;{{article.comments}}&nbsp;&nbsp;</span>
+              <span><a class="iconfont">&#xe630;</a>&nbsp;{{article.loves}}</span>
+            </div>
           </b-col>
-          <b-col cols="4">
-            <b-img style = "width: 160px; height: 120px;" right src="//upload-images.jianshu.io/upload_images/5049362-40b1a106860650f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240" alt="right image" />
+          <b-col cols="3">
+            <b-img
+              rounded
+              :src="article.cover"
+              fluid
+              right
+              width="125"
+              height="100"/>
           </b-col>
         </b-row>
-      </div>
-    </b-card>
-    <b-card title=""
-            img-alt="Img"
-            img-top>
-      <div class="clearfix">
-        <b-row>
-          <b-col cols="8">
-            <a class="title" target="_blank" href="/h">海底捞董事长：我做了那么多亲情化举动，却“败给”一个吧台小姑娘</a>
-            <p class="card-text article">
-              01 刚当程序员时，我是属于那种勤勤恳恳类型的员工，工作态度用认真来形容不为过，
-              每天我几乎是团队里最早到公司，又最晚下班的一个。而组员张工一般情...
-            </p>
-            <div class="meta">
-              <a class="card-text" target="_blank" style="color: gray ;font-size: 16px">暮时说势</a>
-              <a target="_blank">
-                <i class="card-text">
-                  <b-img clss="img"
-                         style="opacity:0.5;
-                         filter:alpha(opacity=50);"
-                         src="../../static/img/remake.png"/>
-                  6</i>
-              </a> <span style="padding-left: 8px"><i class="card-text">
-              <b-img class="img" src="../../static/img/like.png"/>9</i> </span>
-            </div>
-            <!--<div slot="footer">-->
-            <!--<small class="text-muted">Last updated 3 mins ago</small>-->
-            <!--</div>-->
-          </b-col>
-          <b-col cols="4">
-            <b-img style = "width: 160px; height: 120px;" right src="//upload-images.jianshu.io/upload_images/5049362-40b1a106860650f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240" alt="right image" />
-          </b-col>
-        </b-row>
-      </div>
-    </b-card>
-    <b-card title=""
-            img-alt="Img"
-            img-top>
-      <div class="clearfix">
-        <b-row>
-          <b-col cols="8">
-            <a class="title" target="_blank" href="/h">海底捞董事长：我做了那么多亲情化举动，却“败给”一个吧台小姑娘</a>
-            <p class="card-text article">
-              01 刚当程序员时，我是属于那种勤勤恳恳类型的员工，工作态度用认真来形容不为过，
-              每天我几乎是团队里最早到公司，又最晚下班的一个。而组员张工一般情...
-            </p>
-            <div class="meta">
-              <a class="card-text" target="_blank" style="color: gray ;font-size: 16px">暮时说势</a>
-              <a target="_blank">
-                <i class="card-text">
-                  <b-img clss="img"
-                         style="opacity:0.5;
-                         filter:alpha(opacity=50);"
-                         src="../../static/img/remake.png"/>
-                  6</i>
-              </a> <span style="padding-left: 8px"><i class="card-text">
-              <b-img class="img" src="../../static/img/like.png"/>9</i> </span>
-            </div>
-            <!--<div slot="footer">-->
-            <!--<small class="text-muted">Last updated 3 mins ago</small>-->
-            <!--</div>-->
-          </b-col>
-          <b-col cols="4">
-            <b-img style = "width: 160px; height: 120px;" right src="//upload-images.jianshu.io/upload_images/5049362-40b1a106860650f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240" alt="right image" />
-          </b-col>
-        </b-row>
-      </div>
-    </b-card>
-    <b-card title=""
-            img-alt="Img"
-            img-top>
-      <div class="clearfix">
-        <b-row>
-          <b-col cols="8">
-            <a class="title" target="_blank" href="/h">海底捞董事长：我做了那么多亲情化举动，却“败给”一个吧台小姑娘</a>
-            <p class="card-text article">
-              01 刚当程序员时，我是属于那种勤勤恳恳类型的员工，工作态度用认真来形容不为过，
-              每天我几乎是团队里最早到公司，又最晚下班的一个。而组员张工一般情...
-            </p>
-            <div class="meta">
-              <a class="card-text" target="_blank" style="color: gray ;font-size: 16px">暮时说势</a>
-              <a target="_blank">
-                <i class="card-text">
-                  <b-img clss="img"
-                         style="opacity:0.5;
-                         filter:alpha(opacity=50);"
-                         src="../../static/img/remake.png"/>
-                  6</i>
-              </a> <span style="padding-left: 8px"><i class="card-text">
-              <b-img class="img" src="../../static/img/like.png"/>9</i> </span>
-            </div>
-            <!--<div slot="footer">-->
-            <!--<small class="text-muted">Last updated 3 mins ago</small>-->
-            <!--</div>-->
-          </b-col>
-          <b-col cols="4">
-            <b-img style = "width: 160px; height: 120px;" right src="//upload-images.jianshu.io/upload_images/5049362-40b1a106860650f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240" alt="right image" />
-          </b-col>
-        </b-row>
-      </div>
-    </b-card>
-    <b-card title=""
-            img-alt="Img"
-            img-top>
-      <div class="clearfix">
-        <b-row>
-          <b-col cols="8">
-            <a class="title" target="_blank" href="/h">海底捞董事长：我做了那么多亲情化举动，却“败给”一个吧台小姑娘</a>
-            <p class="card-text article">
-              01 刚当程序员时，我是属于那种勤勤恳恳类型的员工，工作态度用认真来形容不为过，
-              每天我几乎是团队里最早到公司，又最晚下班的一个。而组员张工一般情...
-            </p>
-            <div class="meta">
-              <a class="card-text" target="_blank" style="color: gray ;font-size: 16px">暮时说势</a>
-              <a target="_blank">
-                <i class="card-text">
-                  <b-img clss="img"
-                         style="opacity:0.5;
-                         filter:alpha(opacity=50);"
-                         src="../../static/img/remake.png"/>
-                  6</i>
-              </a> <span style="padding-left: 8px"><i class="card-text">
-              <b-img class="img" src="../../static/img/like.png"/>9</i> </span>
-            </div>
-            <!--<div slot="footer">-->
-            <!--<small class="text-muted">Last updated 3 mins ago</small>-->
-            <!--</div>-->
-          </b-col>
-          <b-col cols="4">
-            <b-img style = "width: 160px; height: 120px;" right src="//upload-images.jianshu.io/upload_images/5049362-40b1a106860650f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240" alt="right image" />
-          </b-col>
-        </b-row>
-      </div>
-    </b-card>
-    <b-card title=""
-            img-alt="Img"
-            img-top>
-      <div class="clearfix">
-        <b-row>
-          <b-col cols="8">
-            <a class="title" target="_blank" href="/h">海底捞董事长：我做了那么多亲情化举动，却“败给”一个吧台小姑娘</a>
-            <p class="card-text article">
-              01 刚当程序员时，我是属于那种勤勤恳恳类型的员工，工作态度用认真来形容不为过，
-              每天我几乎是团队里最早到公司，又最晚下班的一个。而组员张工一般情...
-            </p>
-            <div class="meta">
-              <a class="card-text" target="_blank" style="color: gray ;font-size: 16px">暮时说势</a>
-              <a target="_blank">
-                <i class="card-text">
-                  <b-img clss="img"
-                         style="opacity:0.5;
-                         filter:alpha(opacity=50);"
-                         src="../../static/img/remake.png"/>
-                  6</i>
-              </a> <span style="padding-left: 8px"><i class="card-text">
-              <b-img class="img" src="../../static/img/like.png"/>9</i> </span>
-            </div>
-            <!--<div slot="footer">-->
-            <!--<small class="text-muted">Last updated 3 mins ago</small>-->
-            <!--</div>-->
-          </b-col>
-          <b-col cols="4">
-            <b-img style = "width: 160px; height: 120px;" right src="//upload-images.jianshu.io/upload_images/5049362-40b1a106860650f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240" alt="right image" />
-          </b-col>
-        </b-row>
-      </div>
-    </b-card>
-    <b-card title=""
-            img-alt="Img"
-            img-top>
-      <div class="clearfix">
-        <b-row>
-          <b-col cols="8">
-            <a class="title" target="_blank" href="/h">海底捞董事长：我做了那么多亲情化举动，却“败给”一个吧台小姑娘</a>
-            <p class="card-text article">
-              01 刚当程序员时，我是属于那种勤勤恳恳类型的员工，工作态度用认真来形容不为过，
-              每天我几乎是团队里最早到公司，又最晚下班的一个。而组员张工一般情...
-            </p>
-            <div class="meta">
-              <a class="card-text" target="_blank" style="color: gray ;font-size: 16px">暮时说势</a>
-              <a target="_blank">
-                <i class="card-text">
-                  <b-img clss="img"
-                         style="opacity:0.5;
-                         filter:alpha(opacity=50);"
-                         src="../../static/img/remake.png"/>
-                  6</i>
-              </a> <span style="padding-left: 8px"><i class="card-text">
-              <b-img class="img" src="../../static/img/like.png"/>9</i> </span>
-            </div>
-            <!--<div slot="footer">-->
-            <!--<small class="text-muted">Last updated 3 mins ago</small>-->
-            <!--</div>-->
-          </b-col>
-          <b-col cols="4">
-            <b-img style = "width: 160px; height: 120px;" right src="//upload-images.jianshu.io/upload_images/5049362-40b1a106860650f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240" alt="right image" />
-          </b-col>
-        </b-row>
-      </div>
-    </b-card>
+      </router-link>
+    </div>
   </div>
-
 </template>
 
 <script>
-    export default {
-        name: "Article"
+  export default {
+    name: "Articles",
+    data() {
+      return {
+        articles: []
+      }
+    },
+    mounted() {
+      this.$http
+        .get("http://localhost:8080/article/all")
+        .then((res) => {
+          this.articles = res.data.data;
+        })
     }
+  }
 </script>
 
 <style scoped>
-.title{
-  color: black;
-  font-weight: bold;
-}.article{
-  color: gray;
- }
+  a {
+    text-decoration: none;
+  }
+
+  .article-content {
+    margin-top: 10px;
+    padding: 35px 0 30px 0;
+    border-top: solid 1px rgb(240, 240, 240);
+  }
+
+  .title > span {
+    color: rgb(51, 51, 51);
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .abstract > span {
+    color: rgb(153, 153, 153);
+    font-size: 13px;
+  }
 </style>

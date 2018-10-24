@@ -3,7 +3,7 @@
     <b-col cols="8">
       <v-carousel></v-carousel>
       <v-topics></v-topics>
-      <v-article></v-article>
+      <v-articles></v-articles>
     </b-col>
     <b-col>
       <v-right></v-right>
@@ -18,7 +18,7 @@
 
 <script>
   import vCarousel from '../common/Carousel';
-  import vArticle from '../common/Article';
+  import vArticles from '../common/Articles';
   import vRight from '../common/Right';
   import vTopics from '../page/Topics';
   import 'bootstrap/dist/css/bootstrap.css'
@@ -29,7 +29,7 @@
     name: "Index",
     components: {
       vCarousel,
-      vArticle,
+      vArticles,
       vRight,
       vTopics
     }
