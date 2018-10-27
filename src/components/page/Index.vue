@@ -6,6 +6,19 @@
       <v-articles></v-articles>
     </b-col>
     <b-col>
+        <a target="_blank" href="/r1"><img class="xiao" src="//cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png" alt="Banner s 3"></a>
+        <a target="_blank" href="/r2"><img class="xiao" src="//cdn2.jianshu.io/assets/web/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png" alt="Banner s 4"></a>
+        <a target="_blank" href="/r3"><img class="xiao" src="//cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png" alt="Banner s 7"></a>
+        <a target="_blank" href="/r4"><img class="xiao"src="//cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png" alt="Banner s 5"></a>
+        <a target="_blank" href="/r5"><img class="xiao" src="//cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png" alt="Banner s 6"></a>
+        <a id="index-aside-download-qrbox" class="col-xs-8 download" data-toggle="popover" data-placement="top" data-html="true" data-trigger="hover" data-content="<img src=&quot;//cdn2.jianshu.io/assets/web/download-index-side-qrcode-cb13fc9106a478795f8d10f9f632fccf.png&quot; alt=&quot;Download index side qrcode&quot; />" href="/apps?utm_medium=desktop&amp;utm_source=index-aside-click" data-original-title="" title="">
+          <img class="qrcode" src="//cdn2.jianshu.io/assets/web/download-index-side-qrcode-cb13fc9106a478795f8d10f9f632fccf.png" alt="Download index side qrcode">
+          <div class="info">
+            <div class="title">下载简书手机App<a href="#" class="btn btn-default"><b-img class = "img-small"src="../../static/img/left.png"/></a>
+            </div>
+            <div class="description">随时随地发现和创作内容</div>
+          </div>
+        </a>
       <v-right></v-right>
     </b-col>
   <b-col>
@@ -73,4 +86,48 @@
     /*font-size: 14px;*/
     /*color: #787878;*/
   /*}*/
+
+
+
+  .xiao{
+    width: 280px;
+    height: 50px;
+  }
+  .download {
+    margin-bottom: 30px;
+    padding: 10px 22px;
+    width: 100%;
+    border: 1px solid #f0f0f0;
+    border-radius: 6px;
+    background-color: #fff;
+  }
+  .info {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 7px;
+  }
+  .qrcode {
+    width: 60px;
+    height: 60px;
+    opacity: .85;
+  }
+  .title {
+    font-size: 15px;
+    color: #333;
+  }
+  .description {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #999;
+  }.img-small{
+     width: 10px;
+     height: 10px;
+   }
+  i {
+    position: inherit;
+    width: inherit;
+    height: inherit;
+    font-size: 13px;
+  }
+
 </style>

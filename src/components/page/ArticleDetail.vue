@@ -5,7 +5,8 @@
       <div class="author">
         <div class="row">
           <b-col cols="2">
-             <img src="http://localhost:8080/static/img/avatar12.jpeg" class="author-avatar">
+             <!--<img src="http://localhost:8080/static/img/avatar12.jpeg" class="author-avatar">-->
+            <img src="//upload.jianshu.io/users/upload_avatars/4893996/3d931822-23ee-48cd-bd7a-f9a27f60118b.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" class="author-avatar">
           </b-col>
           <b-col cols="10">
             <div class="author-right-top">
