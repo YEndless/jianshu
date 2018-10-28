@@ -260,8 +260,8 @@
           <img :src="hotUser.avatar" class="avatar"/>
         </router-link>
         <div class="author-info">
-          <h6>{{hotUser.nickName}}</h6>
-          <span>写了{{hotUser.wordsCount}}个字·喜欢{{hotUser.likeCount}}</span>
+          <h6>{{hotUser.nickname}}</h6>
+          <span>写了{{hotUser.wordsCount}}个字·{{hotUser.likeCount}}喜欢</span>
         </div>
         <span class="follow">关注</span>
       </b-media>
@@ -272,59 +272,59 @@
 
   </div>
 </template>
-<script>
-  export default {
-    data() {
-      return {
-        hotUsers: [
-          {
-            "userId": 1,
-            "nickName": "夜未央",
-            "avatar": "https://upload.jianshu.io/collections/images/83/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64",
-            "description":"学习" ,
-            "likeCount":111,
-            "wordsCount":222
-          },
-          {
-            "userId": 2,
-            "nickName": "读书",
-            "avatar": "https://upload.jianshu.io/collections/images/83/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64",
-            "description":"学习" ,
-            "likeCount":111,
-            "wordsCount":222
-          },
-          {
-            "userId": 3,
-            "nickName": "读书",
-            "avatar": "https://upload.jianshu.io/collections/images/83/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64",
-            "description":"习学习" ,
-            "likeCount":111,
-            "wordsCount":222
-          }
-        ]
-      }
-    }
-  }
-</script>
 <!--<script>-->
   <!--export default {-->
-    <!--name: "Authors",-->
     <!--data() {-->
       <!--return {-->
-        <!--hotUsers: []-->
+        <!--hotUsers: [-->
+          <!--{-->
+            <!--"userId": 1,-->
+            <!--"nickName": "夜未央",-->
+            <!--"avatar": "https://upload.jianshu.io/collections/images/83/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64",-->
+            <!--"description":"学习" ,-->
+            <!--"likeCount":111,-->
+            <!--"wordsCount":222-->
+          <!--},-->
+          <!--{-->
+            <!--"userId": 2,-->
+            <!--"nickName": "读书",-->
+            <!--"avatar": "https://upload.jianshu.io/collections/images/83/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64",-->
+            <!--"description":"学习" ,-->
+            <!--"likeCount":111,-->
+            <!--"wordsCount":222-->
+          <!--},-->
+          <!--{-->
+            <!--"userId": 3,-->
+            <!--"nickName": "读书",-->
+            <!--"avatar": "https://upload.jianshu.io/collections/images/83/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64",-->
+            <!--"description":"习学习" ,-->
+            <!--"likeCount":111,-->
+            <!--"wordsCount":222-->
+          <!--}-->
+        <!--]-->
       <!--}-->
-    <!--},-->
-    <!--created() {-->
-      <!--var that = this-->
-      <!--this.$http-->
-        <!--.get('http://localhost:8080/user/hot')-->
-        <!--.then(function (response) {-->
-          <!--// alert(JSON.stringify(response.data.data));-->
-          <!--that.hotUsers = response.data.data;-->
-        <!--})-->
     <!--}-->
   <!--}-->
 <!--</script>-->
+<script>
+  export default {
+    name: "Authors",
+    data() {
+      return {
+        hotUsers: []
+      }
+    },
+    created() {
+      var that = this
+      this.$http
+        .get('http://localhost:8080/user/hot')
+        .then(function (response) {
+          // alert(JSON.stringify(response.data.data));
+          that.hotUsers = response.data.data;
+        })
+    }
+  }
+</script>
 
 <style scoped>
   .recommended-authors {
